@@ -1,0 +1,16 @@
+[PHP Classes] Weekly newsletter of Tuesday - 2012-12-04
+If you are seeing this is because you may need to change your preferred
+message format from HTML to plain text.
+
+You are getting this message because you voluntarily subscribed to the PHP
+Classes site.
+
+If want to switch your subscription e-mail format to plain text or just
+want to stop receiving messages like this, just go in the user options
+page: http://www.phpclasses.org/options.html .
+
+Please try to help yourself because it may take some time until you get
+human assistance.
+
+Thank you,
+PHP Classes

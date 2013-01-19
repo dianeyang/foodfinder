@@ -1,0 +1,29 @@
+[HUMA Members] Slice of Pi - Quantum Computing (Tomorrow!)
+HUMA Presents: Slice of Pi
+Memorial Hall 203
+Sunday, November 11
+4:00 PM
+
+*RSVP here: **https://www.facebook.com/events/441008915934490/*
+
+
+*[image: Inline image 1]
+*
+*Come learn some math - and enjoy some free pie!*
+*
+*
+*"Slice of Pi" is a biweekly (i.e., every two weeks) seminar on topics in
+pure and applied mathematics.  It assumes no background and is accessible
+to students of all levels.  **This week's topic is:*
+
+"Quantum Computing and Fast Factorization"
+
+Since its invention in the 1990s, quantum computing has produced some
+incredible algorithms, manyof which are exponentially faster than their
+traditional counterparts.  We'll walk through the mathematical basics
+of quantum
+computing, then explain Shor's algorithm for fast integer factorization.
+_______________________________________________
+Huma-members mailing list
+Huma-members@lists.hcs.harvard.edu
+https://lists.hcs.harvard.edu/mailman/listinfo/huma-members

@@ -1,0 +1,63 @@
+[SPS] Reminder of today's Special CMT Talk: 12/06/12 Department of
+	Physics Special Condensed Matter Seminar, Ali Yazdani,
+	Princeton University
+Harvard University
+Department of Physics
+Special Condensed Matter Seminar
+Thursday, December 6, 2012
+3:00 p.m., in Jefferson 250 
+   
+"Visualizing and Manipulating Topological Quantum
+States in Novel Materials and Nanostructures"
+  
+ 
+Professor Ali Yazdani 
+Princeton University 
+  
+
+
+Abstract: 
+
+Soon after the discovery of quantum mechanics it was realized why some
+solids are insulating (like diamond) and others are highly conducting
+(like graphite), even though they could be comprised of the same
+element. Now, 80 years later, the concept of insulators and metals is
+again being fundamentally revised. During the last few years, it has
+become apparent that there can be a distinct type of insulator, which
+can occur because of the topology of electronic wave functions in
+materials. The key consequence of this topological characteristic (and
+the way to distinguish a topological insulator from an ordinary one)
+is the presence of metallic electrons with helical spin texture at
+their surfaces. I will describe experiments that directly visualize
+these novel quantum states of matter and demonstrate their unusual
+properties through spectroscopic mapping with the scanning tunneling
+microscope (STM). These experiments show that the spin texture of
+these states protects them against back scattering and localization.
+[1] In fact, these states appear to penetrate through barriers that
+stop other electronic states. [2,3] I will also describe more ongoing
+efforts focused on manipulating these states with magnetism and
+experiments on new class of topological states that are protected by
+crystalline symmetry. Finally, I will describe efforts in which
+atomically fabricated nano structures are being used to create
+topological states and the hunt for novel topological edge modes that
+behave like Majorana Fermions. [4]
+
+References:
+
+[1] P. Roushan et al. Nature 460 1106 (2009).
+
+[2] J. Seo et al. Nature, 466 434 (2010).
+
+[3] H. Beidenkpof et al. Nature Physics, (2011).
+
+[4] S. Nadj-Perge et al. (2012).
+
+For announcement poster please go to:
+http://www.physics.harvard.edu/events/colloquium2.pdf 
+
+ 
+
+_______________________________________________
+sps-list mailing list
+sps-list@lists.hcs.harvard.edu
+https://lists.hcs.harvard.edu/mailman/listinfo/sps-list

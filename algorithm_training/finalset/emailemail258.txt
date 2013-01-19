@@ -1,0 +1,26 @@
+confirm 13f689bafbda54793adf4719123f3d1ec21c1a18
+Mailing list subscription confirmation notice for mailing list
+sps-list
+
+We have received a request from 140.247.0.75 for subscription of your
+email address, "harvardfoodfinder@gmail.com", to the
+sps-list@lists.hcs.harvard.edu mailing list.  To confirm that you want
+to be added to this mailing list, simply reply to this message,
+keeping the Subject: header intact.  Or visit this web page:
+
+    https://lists.hcs.harvard.edu/mailman/confirm/sps-list/13f689bafbda54793adf4719123f3d1ec21c1a18
+
+
+Or include the following line -- and only the following line -- in a
+message to sps-list-request@lists.hcs.harvard.edu:
+
+    confirm 13f689bafbda54793adf4719123f3d1ec21c1a18
+
+Note that simply sending a `reply' to this message should work from
+most mail readers, since that usually leaves the Subject: line in the
+right form (additional "Re:" text in the Subject: is okay).
+
+If you do not wish to be subscribed to this list, please simply
+disregard this message.  If you think you are being maliciously
+subscribed to the list, or have any other questions, send them to
+sps-list-owner@lists.hcs.harvard.edu.

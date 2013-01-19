@@ -1,0 +1,54 @@
+[HUMA Members] Fwd: PhD Studies,
+	UChicago Computational and Applied Math
+---------- Forwarded message ----------
+From: Lek-Heng Lim <lekheng@galton.uchicago.edu>
+
+
+Hi Evan,
+
+I hope this e-mail finds you well.
+
+We're starting to recruit PhD students in computational and applied math
+this year. I am trying to seek out potential applicants from the best
+places. Could you kindly help forward this to any of your classmates who
+might be interested?
+
+
+Thanks very much,
+Lek-Heng
+
+
+The University of Chicago has started a Computational and Applied
+Mathematics Initiative (CAMI), housed within the Department of Statistics.
+
+The initiative is motivated by an increasing interest in analyzing and
+modeling high dimensional data, both static and dynamic, and handling very
+large data sets in multiple scientific domains, which has led to an
+increased flow of ideas between applied mathematics, statistics and
+computation. A synergy is emerging among fields such as statistical
+modeling of high dimensional data, parameter estimation, optimization,
+machine learning, dynamical systems, and numerical analysis.
+
+We invite potential PhD students interested in computational and applied
+mathematics with a data analytic flavor to apply:
+
+   http://www.stat.uchicago.edu/**admissions/index.shtml<http://www.stat.uchicago.edu/admissions/index.shtml>
+
+The CAMI faculty research interests include: bioinformatics, computational
+neuroscience, environmental and spatial statistics, machine learning,
+mathematical finance and econometrics, Monte Carlo methods, numerical
+linear/multilinear algebra, optimization, and pattern recognition.
+
+The University of Chicago has had a tradition in applied and comutational
+mathematics education (past faculty and students include George Birkhoff,
+Fisher Black, Alberto Calderon, Robert Floyd, Herman Goldstine, Richard
+Hamming, Alston Householder, Tjalling Koopmans, Martin Kruskal, Harry
+Markowitz, Nicolas Metropolis, Albert Tucker). The CAMI represents part of
+the University's long-term goal in building on this tradition.
+
+Please forward this to your students. They should apply to our Statistics
+PhD program by 12/31/12, indicating interest in CAMI in their statement.
+_______________________________________________
+Huma-members mailing list
+Huma-members@lists.hcs.harvard.edu
+https://lists.hcs.harvard.edu/mailman/listinfo/huma-members

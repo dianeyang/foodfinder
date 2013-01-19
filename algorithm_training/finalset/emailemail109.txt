@@ -1,0 +1,12 @@
+[Icontem] Confirm your account
+Hello food finder,
+
+Your account in the Icontem Accounts site was created. Please go to this
+page to confirm your e-mail address and set your password to access the
+site.
+
+https://accounts.icontem.com/confirm?c=3D5fd7e1&site=3Dphpclasses.org
+
+Thank you,
+Icontem Accounts site
+

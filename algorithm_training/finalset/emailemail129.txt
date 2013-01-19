@@ -1,0 +1,36 @@
+[Ventures] RIGHT NOW: HubSpot and PaperG!
+VP of Engineering at Hubspot. COO of PaperG. Don't miss this hacknight!
+
+-Zach
+
+----
+
+Hey everyone,
+
+Thanks so much to those of you who came out to the Hackathon on 
+Saturday! With Thanksgiving just around the corner, we've got two more 
+Hack Nights planned for you this semester. The next one is tonight, and 
+we're extremely lucky to have two amazing speakers!
+
+Elias Torres, VP of Engineering at HubSpot <http://www.hubspot.com/>
+HubSpot all-in-one marketing software helps more than 8,000 companies in 
+56 countries attract leads and convert them into customers. A pioneer in 
+inbound marketing, HubSpot aims to help its customers make marketing 
+that people actually love.
+
+Roger Lee, Chief Operating Officer at PaperG <http://www.paperg.com/>
+PaperG is a platform for local advertising, simplifying every step of 
+the process from ad creation to ad targeting to optimization. PaperG 
+works with over 150 local media partners that resell its products to 
+over 20,000 local advertisers.
+
+As usual, Hack Nights start at 9pm in the CS50 lounge, with talks 
+beginning at 10! Pizza generously provided by General Catalyst. Hope to 
+see you all there!
+
+Best,
+Lexi
+_______________________________________________
+Ventures mailing list
+Ventures@lists.hcs.harvard.edu
+https://lists.hcs.harvard.edu/mailman/listinfo/ventures

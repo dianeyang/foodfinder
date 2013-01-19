@@ -1,0 +1,49 @@
+Welcome to the "sps-open" mailing list
+Welcome to the sps-open@lists.hcs.harvard.edu mailing list! Welcome to
+sps-open, the counterpart to sps-list.  We automatically subscribe
+members of sps-list to sps-open.  You are completely free to
+unsubscribe if you so desire.  However, we highly encourage you to
+take full advantage of the membership.
+
+Since sps-list is a moderated list, we restrict emails to official
+messages about SPS and physics department events and announcements. On
+the other hand, sps-open is a forum for open communication.  All
+publicity of research and internship opportunities as well as
+interesting and related events in the area should be directed to the
+open.  The open is also useful for discussion on interesting articles,
+stories, problems, and classes (because the open is entirely populated
+by students and not faculty). We hope to keep sps-open unmoderated for
+members, so please exercise moderation when posting.
+
+To post to this list, send your email to:
+
+  sps-open@lists.hcs.harvard.edu
+
+General information about the mailing list is at:
+
+  https://lists.hcs.harvard.edu/mailman/listinfo/sps-open
+
+If you ever want to unsubscribe or change your options (eg, switch to
+or from digest mode, change your password, etc.), visit your
+subscription page at:
+
+  https://lists.hcs.harvard.edu/mailman/options/sps-open/harvardfoodfinder%40gmail.com
+
+
+You can also make such adjustments via email by sending a message to:
+
+  sps-open-request@lists.hcs.harvard.edu
+
+with the word `help' in the subject or body (don't include the
+quotes), and you will get back a message with instructions.
+
+You must know your password to change your options (including changing
+the password, itself) or to unsubscribe.  It is:
+
+  canadayf34
+
+Normally, Mailman will remind you of your lists.hcs.harvard.edu
+mailing list passwords once every month, although you can disable this
+if you prefer.  This reminder will also include instructions on how to
+unsubscribe or change your account options.  There is also a button on
+your options page that will email your current password to you.

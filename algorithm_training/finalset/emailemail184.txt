@@ -1,0 +1,56 @@
+[SPS] Talk Announcement: Physics Colloquium Speaker Daniel Dessau,
+	University of Colorado, 11-26-12
+Harvard Physics Colloquium
+Monday, November 26, 2012
+4:15 p.m. - 5:15 p.m. in Jefferson 250
+Tea served in Jefferson 450 @ 3:30 p.m.
+=20
+" Dynamics of Electron Interactions, The Origin of Fermi Arcs, and =
+Pairing in Cuprate Superconductors"
+ =20
+=20
+Daniel Dessau
+University of Cololrado
+ =20
+
+
+Abstract:   The =E2=80=9Cnormal=E2=80=9D, i.e. non-superconducting state =
+of underdoped cuprate superconductors is an extremely unusual state of =
+matter, widely argued to be more exotic and interesting than the high =
+temperature superconducting state to which it is intimately linked. This =
+normal state is characterized by a pseudogap corresponding to partially =
+gapped portions of Fermi surface, and an equally confusing =
+=E2=80=9CFermi arc=E2=80=9D typically described as a discontinuous locus =
+of quasiparticle excitations in which for example electron cyclotron =
+orbits would not be allowed. Here we show, via the introduction and =
+application of a new type of quantitative photoemission-based =
+spectroscopy, that most of the pseudogap and Fermi arc phenomenology is =
+naturally explained as a consequence of the interplay of the temperature =
+and doping dependence of a d-wave superconducting gap/pseudogap with =
+various electronic scattering mechanisms which are experimentally =
+deconvolved for the first time. Furthe
+r, this new method allows us to accurately measure the pairing and =
+pair-breaking rates across the full temperature and doping phase =
+diagram, with clear implications for the mechanism of superconductivity.
+
+
+For announcement poster please go to: =
+http://www.physics.harvard.edu/events/colloquium.pdf
+=20
+
+=20
+
+=20
+
+=20
+
+=20
+
+=20
+
+=20
+
+_______________________________________________
+sps-list mailing list
+sps-list@lists.hcs.harvard.edu
+https://lists.hcs.harvard.edu/mailman/listinfo/sps-list

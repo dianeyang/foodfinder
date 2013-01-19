@@ -1,0 +1,56 @@
+[SPS] Reminder of Colloquium talk with Speaker Martin Weitz,
+ Bonn University, on 12-03-12
+
+*Harvard Physics Colloquium*
+Monday, December 03, 2012
+4:15 p.m. - 5:15 p.m. in Jefferson 250
+/Tea served in Jefferson 450 @ 3:30 p.m./
+
+*/"/**/Bose-Einstein Condensation of Photons"
+/*
+**
+*Martin Weitz*
+Bonn University
+//
+
+Abstract:Bose-Einstein condensation, the macroscopic ground state occupation of a system of bosonic particles below
+a critical temperature, has been observed in cold atomic gases and solid-state physics quasiparticles. In contrast, photons
+do not show this phase transition usually, because in Planck’s blackbody radiation the particle number is not conserved
+and at low temperature the photons disappear in the walls of the system.
+
+I will describe an experiment realizing a photon Bose-Einstein condensate in a dye-filled optical micro cavity, which acts
+as a “white-wall” photon box [1]. The cavity mirrors provide a trapping potential and a non-vanishing effective photon
+mass, making the system formally equivalent to a two-dimensional gas of trapped massive bosons. Thermalization of the
+photon gas is reached in a number conserving way by repeated absorption-emission cycles in the dye molecules.
+
+In my talk, I will begin with a general introduction and give an account of current work, including recent measurements
+of the condensate statistics, and future plans of the Bonn photon gas experiment.
+
+[1] J. Klaers, J. Schmitt, F. Vewinger, and M. Weitz, Nature 468, 545 (2010).
+
+
+/For announcement poster please go 
+to://http://www.physics.harvard.edu/events/colloquium.pdf/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+_______________________________________________
+sps-list mailing list
+sps-list@lists.hcs.harvard.edu
+https://lists.hcs.harvard.edu/mailman/listinfo/sps-list

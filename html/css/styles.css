@@ -1,0 +1,194 @@
+/****************************************************************************
+ * styles.css
+ *
+ * Computer Science 50
+ * Problem Set 7
+ *
+ * Global CSS.
+ ***************************************************************************/
+
+a
+{
+	color: #FF3300;
+}
+
+a:hover
+{
+	color: #FFFFFF;
+	background-color: #FF3300;
+	text-decoration:none;
+}
+
+body
+{
+    background-color: #EAEAEA;
+    background-image: url('http://www.hcs.harvard.edu/cs50-foodfinder/html/img/stripes.png');
+	line-height: normal;
+	font-family: 'PT Sans';
+}
+
+input, button, select, textarea 
+{
+	font-family: 'PT Sans';
+}
+
+.btn
+{
+	background-image: none;
+	border: 0px;
+	border-radius: 0px;
+	background-color: #CCCCCC;
+	box-shadow: none;
+}
+
+.container
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: 100%;
+}
+
+.modal
+{
+	width: 800px;
+	margin: -350px 0 0 -400px;
+}
+
+.modal-body
+{
+	max-height: 550px;
+}
+
+.modal.fade
+{
+    -webkit-transition: opacity .05s linear, none;
+    -moz-transition: opacity .05s linear, none;
+    -ms-transition: opacity .05s linear, none;
+    -o-transition: opacity .05s linear, none;
+    transition: opacity .05s linear, none;
+    top: 50%;
+}
+
+.navbar
+{
+	margin-bottom: 0px;
+}
+
+.pageheader
+{
+    color:black;
+    font-family:'Dosis', sans-serif;
+    font-size: 60px;
+    line-height: .75;
+    margin: 0px;
+}
+
+.totop
+{
+	text-align: right;
+	font-weight: bold;
+}
+
+.spanhr
+{
+	width: 70px;
+}
+
+.spanmin
+{
+	width: 60px;
+}
+
+.spanampm
+{
+	width: 85px;
+}
+
+.spandate
+{
+	width: 210px;
+}
+
+.spanloc
+{
+	width: 250px;
+}
+
+#top
+{
+    background-color: #FFFFFF;
+
+}
+
+#email
+{
+	text-align: left;
+}
+
+#headertable
+{
+    table-layout:fixed;
+    margin: 5px 0;
+    height: 100px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Dosis';
+    text-transform: uppercase;
+}
+
+#headertable a
+{
+	color: #000000;
+	background-color: transparent;
+}
+
+#headertable a:hover
+{
+	color: #999999;
+}
+
+#middle
+{
+    /* center contents */
+    text-align: center;
+    overflow-y: auto;
+    max-height: 70%;
+    padding-bottom: 65px;
+    padding-top: 20px
+}
+
+#middle .nav
+{
+    display: inline-block;
+}
+
+#bottom
+{
+    /* font specifications */
+    font-family: 'Dosis';
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #999;
+    font-size: smaller;
+
+	/* center contents */
+    text-align: center;
+
+    /* surround with whitespace */
+    padding: 14px;
+    
+	/* positioning */
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	
+	/* background color */
+    background-color: black;  
+}
+
+#bottom a, #email a
+{
+	background-color: transparent;
+}

@@ -1,0 +1,91 @@
+[AAA-open] This week on the THURJ Blog!
+[image: Inline image 6]
+
+*Happy Thanksgiving from THURJ!*
+*
+*
+
+
+*A Gift from the Jellyfish: DNA Tentacles for Cancer Cell
+Capture<http://thurj.org/blog/2012/11/3814/>
+*
+
+"Cellular capture devices using DNA aptamers have the potential to improve
+drug discovery and monitoring therapy for a wide range of illnesses. The
+targets of the devices can be altered by modifying the DNA aptamers, and
+they even can be engineered to bind to specific bacteria or viruses present
+in a peripheral blood sample. Furthermore, these DNA networks can be
+exploited to isolate and preserve rare cell types, such as CD4 T cells and
+stem cells, for analysis in research laboratories."
+
+*What Makes Us Outgoing? A Neurophysiological
+Answer<http://thurj.org/blog/2012/11/3832/>
+*
+
+"I have always thought that I was an approachable and outgoing person, but
+I could not determine what exactly drove this propensity to share
+information about myself. Recently, I discovered a neurophysiological
+answer to this question. According to a
+study<http://www.pnas.org/content/early/2012/05/01/1202129109.full.pdf+html=
+>
+ conducted by Harvard psychologists Diana Tamir and Jason Mitchell,
+individuals find it intrinsically rewarding to disclose personal thoughts
+to others."
+
+*What's in your Food? The Battle Over Genetically Modified
+Foods<http://thurj.org/blog/2012/11/3828/>
+*
+
+"On November 6, when all eyes were on the incoming results of the
+presidential election a fierce battle over genetically modified foods was
+being fought in California. Proposition 37, one of eleven measures on the
+November ballot, was a measure that, if passed, would have required
+manufacturers to label all food products with genetically engineered
+ingredients."
+
+*The End of Language Barriers? <http://thurj.org/blog/2012/11/3823/>*
+
+"Real time machine translation may soon be upon us, opening up a slew of
+possibilities for systems that completely break down language barriers
+around the world. The current state of speech recognition technologies
+suggest that though there is still much work to be done, such systems could
+start appearing over the next few years."
+
+*Alpha Syn Lewy Bodies Shown to be Definitively Causal for Parkinson's
+Disease <http://thurj.org/blog/2012/11/3800/>*
+
+"Recently, Virginia M-Y Lee and Kevin C. Luk, researchers at the Center for
+Degenerative Disease Research at Perelman School of Medicine, University of
+Pennsylvania, discovered that injection of misfolded, fibrillar
+alpha-Synuclein (alpha-Syn) into mice without PD caused marked
+neurodegeneration via alpha-Syn clumps and midbrain dopamine producing
+neuronal demise."
+
+*Key Gene Located in Alzheimer's Disease<http://thurj.org/blog/2012/11/3798=
+/>
+*
+
+"An international team partly consisting of researchers from the Mayo
+Clinic in Florida and Minnesota has identified a gene that could triple an
+individual=92s chances of getting Alzheimer=92s Disease."
+
+*The Power of the Mind: Controlling Robotic
+Movement<http://thurj.org/blog/2012/11/3792/>
+*
+
+"The researchers hope this technology will help paraplegics, who can
+manipulate a robot to assist in daily tasks or even sight-see in foreign
+countries. This research highlights the ever-expanding applications of
+brain-computer interfaces. Already, we have seen BCI restore partial vision
+to the blind, extract mental images, and generate use of prosthetic limbs.
+What could possibly be next?"
+
+
+--=20
+Anji Tang
+Harvard College
+Class of 2013
+_______________________________________________
+AAA-open mailing list
+AAA-open@lists.hcs.harvard.edu
+https://lists.hcs.harvard.edu/mailman/listinfo/aaa-open

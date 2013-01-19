@@ -1,0 +1,61 @@
+[SPS] Reminder of Today's Talk: Special Harvard Physics Colloquium
+	with David Goldhaber-Gordon, Stanford University, Tuesday 11/20/12
+Special Harvard Physics Colloquium
+Tuesday, November 20, 2012
+3:00 p.m. in Jefferson 250
+  =20
+"Model Many-Body Systems Based on Quantum Dots"
+=20
+=20
+David Goldhaber-Gordon
+Stanford University
+ =20
+
+
+Abstract: Materials physicists traditionally tailor complex materials to =
+achieve desired electronic properties.  I will present  a complementary =
+approach: instead of developing new and exotic materials, work with =
+semiconductor heterostructures, materials whose properties are simple =
+and well-established.  Then use nanolithography to carve them into a set =
+of coupled electron droplets, designed to match a Hamiltonian of =
+interest. Nanopatterned electrodes can be used to tune many important =
+parameters. I will describe how we can achieve pseudospin-resolved =
+transport and spectroscopy through a many-body system, testing =
+previously inaccessible theory. (1) I will also explain plans to extend =
+these ideas to systems of multiple coupled local sites, as a model for =
+quantum criticality in heavy-fermion systems, as well as to conduct some =
+of the first phase-sensitive transport measurements on many-body =
+systems. (2)  I will also give a brief overview of my group's other work =
+on electrons in low-dimensional systems, from graphene to topological =
+insulators to complex oxides.
+
+(1)S. Amasha, A. J. Keller, I. G. Rau, A. Carmi, J. A. Katine, H. =
+Shtrikman, Y. Oreg, D. Goldhaber-Gordon, "Pseudospin-Resolved Transport =
+Spectroscopy of the Kondo Effect in a Double Quantum Dot," =
+arXiv:1207.0526 (2012).
+
+(2)Assaf Carmi, Yuval Oreg, Micha Berkooz, David Goldhaber-Gordon, =
+"Transmission phase shifts of Kondo impurities", Phys. Rev. B 86, 115129 =
+(2012).=20
+
+
+For announcement poster please go to: =
+http://www.physics.harvard.edu/events/colloquium2.pdf =
+<http://www.physics.harvard.edu/events/colloquium.pdf>=20
+
+=20
+
+=20
+
+=20
+
+=20
+
+=20
+
+=20
+
+_______________________________________________
+sps-list mailing list
+sps-list@lists.hcs.harvard.edu
+https://lists.hcs.harvard.edu/mailman/listinfo/sps-list

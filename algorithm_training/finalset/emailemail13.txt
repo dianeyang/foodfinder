@@ -1,0 +1,68 @@
+[PHP Classes] Welcome to the PHP Classes site
+*Welcome to the PHP Classes site*
+
+*Read these Useful Tips*
+
+=66ood,
+
+PHP Classes is a site that provides many useful resources to PHP developers=
+=2E
+
+Here follow some tips to help you take the most of the PHP Classes site
+resources.
+
+- *Your Account*
+
+Please keep this message so in the future you may be able to recover the
+access to the site in case you forget your account details.
+
+Your account access name is foodfinder and your registration e-mail address
+is harvardfoodfinder@gmail.com .
+
+- *Get Recognition and Feedback by Submitting Your Classes*
+
+If you have developed interesting classes of PHP objects that are useful to
+yourself, chances are that your classes can also be useful to others.
+
+In that case, consider *submitting your classes* to the PHP Classes site
+now.
+
+The site will expose your work to many thousands of other PHP developers
+eager to learn about new interesting classes.
+
+This way you can easily get feedback and recognition from other fellow PHP
+developers that visit the site every day.
+
+http://www.phpclasses.org/contribute.html
+
+- *Earn Prizes and More Recognition by Submitting Innovative Classes*
+
+Every month the PHP Classes site organizes a contest named *PHP Programming
+Innovation Award* on which it distinguishes all the innovative classes
+submitted to the site.
+
+http://www.phpclasses.org/award/innovation/
+
+All nominees can win nice prizes provided by well known PHP companies. All
+winners and nominees are all listed in the *innovation award rank* by month
+and by year. The year winner can earn additional prizes and recognition.
+
+http://www.phpclasses.org/winners/
+
+If you developed innovative classes or have good ideas for new classes,
+submit them to the PHP Classes site and qualify to earn more prizes and
+recognition now.
+
+- *Find and Submit JavaScript Classes*
+
+If you are looking also for JavaScript classes, you may find them in the JS
+Classes site. That is a site like PHP Classes site but for distributing
+JavaScript classes.
+
+http://www.jsclasses.org/
+
+If you have also developed JavaScript classes, you can submit them to the
+JS Classes site and get similar benefits that you get in PHP Classes site.
+
+
+Once again welcome and enjoy the PHP Classes site.

@@ -1,0 +1,27 @@
+<?php
+include_once("src/facebook.php"); 
+
+$app_id = "112876978889650";
+$app_secret = "0647be0be9faadf29faf2738f7f77525";
+
+$fb = new Facebook(array(
+'appId' => $app_id,
+'secret' => $app_secret,
+'cookie' => true
+));
+
+$params = array(
+scope => 'read_stream,publish_stream,offline_access,manage_pages',
+redirect_uri => 'https://hcs.harvard.edu/cs50-foodfinder/'
+);
+
+$loginUrl = $fb->getLoginUrl($params);
+
+if(($fb->getUser())==0)
+{
+header("Location:{$loginUrl}");
+exit;
+}
+else { echo "Connected to Facebook"; }
+
+?>

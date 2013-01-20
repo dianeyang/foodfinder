@@ -11,17 +11,17 @@
 	echo "start\n";
 	require_once dirname(__FILE__) . "/../includes/config.php";
 
-	 // temp: prevent notice errors
-	 error_reporting(E_ALL ^ E_NOTICE);
+	// temp: prevent notice errors
+	error_reporting(E_ALL ^ E_NOTICE);
 	
-	 define("MAX_STRING", 1048576);
+	define("MAX_STRING", 1048576);
 	 
-	 // get all emails currently in database    
-	 $rows = query("SELECT * FROM emails WHERE freefood = 1 AND parsed = 0");
+	// get all emails currently in database    
+	$rows = query("SELECT * FROM emails WHERE freefood = 1 AND parsed = 0");
 
-	 // go through each email that was downloaded
-	 foreach($rows as $row)
-	 {
+	// go through each email that was downloaded
+	foreach($rows as $row)
+	{
 		// set all variables to null
 		$date_info = NULL;
 		$time_info = NULL;
@@ -40,6 +40,9 @@
 		// go through entire email
 		while($s = fread($email,MAX_STRING)) 
 		{
+						
+			// correct html to plaintext conversion error
+			str_replace('=96', '-', $s);
 			
 			// split into lines 
 			$lines = explode("\n", $text);
@@ -79,7 +82,7 @@
 					$is_date = search_date($oldword, $word);
 	
 				// only look for time if time info hasnt been found already
-				if ($time_info['h'] == NULL && $is_date == 0)
+				if ($time_info['h'] == NULL && $is_date == false)
 					$is_time = search_time($oldword, $word);
 		 
 				// only look for place if place info hasnt been found already
@@ -131,7 +134,7 @@
         $month_numb = array('april' => 4,'aug' => 8,'august' => 8,'dec' => 12,'december' => 12,
         'feb' => 2,'february' => 2,'jan' => 1,'january' => 1,'july' => 7,'june' => 6,
         'march' => 3,'may' => 5,'nov' => 11,'november' => 11,'oct' => 10,'october' => 10,
-        'sep' => 9,'sept' => 9,'september' => 9,);
+		'sep' => 9,'sept' => 9,'september' => 9,);
         
         // array of month words
         $month_dict = array('april', 'aug', 'august','dec','december','feb','february',
@@ -314,111 +317,113 @@
     {         
          global $time_info;
          
-          // if 'pm' or 'am' is in the word
-          if ((strpos($word, 'pm')) !== false || (strpos($word, 'am')) !== false
-          || (strpos($word, 'a.m')) !== false || (strpos($word, 'p.m')) !== false)
-          {
-              // store am/pm
-              if ((strpos($word, 'pm')) !== false || (strpos($word, 'p.m')) !== false)
-                  $time_info['ap'] = 'pm';
-              else
-                  $time_info['ap'] = 'am';  
+		// word cases: noon and midnight
+    	if ($word == "noon")
+    	{
+    		$time_info['h'] = '12';
+    		$time_info['m'] = '00';
+    		$time_info['ap'] = 'pm';
+    	}
+    	 
+    	else if ($word == "midnight")
+    	{
+    		$time_info['h'] = '12';
+    		$time_info['m'] = '00';
+    		$time_info['ap'] = 'am';
+    	}
+         
+    	// if 'pm' or 'am' is in the word
+        else if ((strpos($word, 'pm')) !== false || (strpos($word, 'am')) !== false
+        || (strpos($word, 'a.m')) !== false || (strpos($word, 'p.m')) !== false)
+        {
+    		// store am/pm
+            if ((strpos($word, 'pm')) !== false || (strpos($word, 'p.m')) !== false)
+				$time_info['ap'] = 'pm';
+            else
+                $time_info['ap'] = 'am';  
           
-              // if the number and am/pm are same string: eg 1:30pm
-              if (preg_match('#[0-9]#',$word))
-              {
-                  $word = preg_replace('/[^0-9:]/', "", $word);
-                  
-                  // if number contains : (ie hours and minutes)
-                  if (strstr($word, ':'))
-                  {
-                      $temp = explode(":", $word, 2);
-                      $time_info['h'] = $temp[0];
-                      $time_info['m'] = $temp[1][0] . $temp[1][1];
-                  }
-                  
-                  // if number is only hour (eg 1pm)
-                  else
-                  {
-                      $time_info['h'] = $word;
-                      $time_info['m'] = '00';
-                  }
-              }
-              
-              // if the number is different from am/pm (eg 1:30 pm)
-              else if (preg_match('#[0-9]#',$word))
-              {
-                  // if number contains : (ie hours and minutes)
-                  if (strstr($word, ':'))
-                  {
-                      $temp = explode(":", $word, 2);
-                      $time_info['h'] = $temp[0];
-                      $time_info['m'] = $temp[1][0] . $temp[1][1];
-                  }
-                  
-                  // if number contains only hours
-                  else
-                  {
-                      $time_info['h'] = $word;
-                      $time_info['m'] = '00';
-                  }
-              }
-          }
-          
-          // if written in format 1:30 w/ no other information
-          else if (preg_match('#[0-9]#',$oldword) && strstr($oldword, ':'))
-          {
-              $temp = explode(":", $oldword, 2);
-              $time_info['h'] = $temp[0];
-              $time_info['m'] = $temp[1][0] . $temp[1][1];
+        	// if the number and am/pm are same string: eg 1:30pm
+            if (preg_match('#[0-9]#',$word) && !strpos($word, '-'))
+            {
+                $word = preg_replace('/[^0-9:]/', "", $word);
 
-              // betting that 11 means am, else means pm (since no info given)
-              if ($time_info['h'] == 11)
-                  $time_info['ap'] = 'am';
-              else
-                  $time_info['ap'] = 'pm';
-          } 
-          
-          // account for '6-7' etc
-          else if (preg_match("/^\d{1,2}(\:\d{2})?\-\d{1,2}(\:\d{2})?/", $oldword))
-          {
-              $temp2 = explode("-", $oldword);
-              $time_info['h'] = $temp2[0];
-              $time_info['m'] = '00';
-              	              
-              // determine am/pm based on guess
-              if ($time_info['h'] == 11)
-                  $time_info['ap'] = 'am';
-              else
-                  $time_info['ap'] = 'pm';
-          }
-          
-          
-          // accounts for 'at 7' etc
-          else if (($oldword == 'at') && ($word >= 1) && ($word <= 12))
-          {
-              $time_info['h'] = $word;
-              $time_info['m'] = '00';
+				$temp = explode(":", $word);
+				if(empty($temp[1]))
+					$time_info['m'] = '00';
+				else
+					$time_info['m'] = $temp[1];
+				$time_info['h'] = $temp[0];
+            }
               
-              // determine am/pm based on guess
-              if ($time_info['h'] == 11)
-                  $time_info['ap'] = 'am';
-              else
-                  $time_info['ap'] = 'pm';
-          }
-          // checks that #s are valid
-          if ($time_info['h'] > 12 || $time_info['h'] < 1 || $time_info['m'] < 0 || $time_info['m'] > 59 || 
-              !preg_match("/^[0-9]+$/", $time_info['h']) || !preg_match("/^[0-9]+$/", $time_info['m']))
-          {
-              $time_info['h'] = NULL;
-              $time_info['m'] = NULL;
-              $time_info['ap'] = NULL;
-          }
+            // if number and am/pm are diff words: eg 1:30 pm
+            else if (preg_match('#[0-9]#',$oldword) && !strpos($oldword, '-'))
+            {
+				$temp = explode(":", $oldword);
+				if(empty($temp[1]))
+					$time_info['m'] = '00';
+				else
+					$time_info['m'] = $temp[1];
+				$time_info['h'] = $temp[0];
+            }    
+		}
           
-          if ($time_info['h'] != NULL)
-              return true;
-          else
-              return false;
+			// if written in format 1:30 w/ no other information
+          	else if (preg_match('#[0-9]#',$oldword) && strstr($oldword, ':'))
+          	{
+            	$temp = explode(":", $oldword, 2);
+              	$time_info['h'] = $temp[0];
+              	$time_info['m'] = $temp[1][0] . $temp[1][1];
+          	} 
+          	
+          	// accounts for 'at 7' etc
+          	else if (($oldword == 'at') && ($word >= 1) && ($word <= 12))
+          	{
+              	$time_info['h'] = $word;
+              	$time_info['m'] = '00';
+          	}
+          
+          	// account for '6-7' etc
+          	if (preg_match("/^\d{1,2}(\:\d{2})?\-\d{1,2}(\:\d{2})?/", $oldword))
+         	{
+            	$temp2 = explode("-", $oldword);
+              	$start = explode(":", $temp2[0]);
+              	$end = explode(":", $temp2[1]);
+              
+              	$time_info['h'] = $start[0];
+              
+              	// check if start time has minutes
+              	if(empty($start[1]))
+            		$time_info['m'] = '00';
+              	else
+              	  	$time_info['m'] = $start[1];	       
+          	}
+          
+          	// checks that #s are valid
+          	if ($time_info['h'] > 12 || $time_info['h'] < 1 || $time_info['m'] < 0 || $time_info['m'] > 59 || 
+                !preg_match("/^[0-9]+$/", $time_info['h']) || !preg_match("/^[0-9]+$/", $time_info['m']))
+          	{
+            	$time_info['h'] = NULL;
+              	$time_info['m'] = NULL;
+              	$time_info['ap'] = NULL;
+          	}
+          
+          	// time information was found
+          	if ($time_info['h'] != NULL)
+          	{
+          		
+          		// if am/pm is not specified
+          	  	if ($time_info['ap'] == NULL)
+          	  	{
+          	      	// betting that 11 means am, else means pm (since no info given)
+				  	if ($time_info['h'] == 11)
+					  	$time_info['ap'] = 'am';
+				  	else
+					  	$time_info['ap'] = 'pm';		
+              	}
+              	return true;
+          	}
+          	else
+              	return false;
     }
     
     // find location within email parse
@@ -431,11 +436,15 @@
         'currier','dunster','eliot','emerson','fong','grays','greenough','hollis','holworthy',
         'hurlbut','iop','kirkland','lev','leverett','lionel','lowell','mather','matthews',
         'maxwell', 'maxwell-dwrokin', 'mower','northwest','pennypacker','phoho','phorzheimer',
-        'quincy','sever','soch','straus','stoughton','thayer','ticknor','weld','wigglesworth',
-        'winthrop', 'womens');
+        'quincy','sever','soch', 'stadium', 'stoughton', 'straus','thayer','ticknor', 'track', 
+        'weld','wigglesworth', 'winthrop', 'womens');
           
         // array of room words
         $room_dict = array('basement', 'common','dhall','dining','jcr','junior','scr','senior',);
+        
+        // make sure not to pick up people's personal email signatures
+        if($word == 'mail')
+        	return false;
         
         // check if 1st word is a building
         if (in_array($oldword, $place_dict))

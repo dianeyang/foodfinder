@@ -23,7 +23,7 @@
         // show reporting form
         render("templates/reportform.php", array("events" => $events, "id" => $id));
     }
-    
+    //
     // form was submitted
     else
     {

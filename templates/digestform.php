@@ -1,3 +1,5 @@
+
+
 <div>
 	<!--directions for page-->
 	<p class="lead">
@@ -40,6 +42,5 @@
 	</form>
 </div>
 
-
 <!-- back button -->
-<a href="/cs50-foodfinder";>Back to Event Listings</a>
+<a href="http://www.harvardfoodfinder.com";>Back to Event Listings</a>

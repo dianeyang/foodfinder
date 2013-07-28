@@ -108,15 +108,28 @@
 	foreach($files3 as $file) 
 	{
 		// get id # of file
-		preg_match_all('/([\d]+)/', $file, $numb);
+		preg_match('/([\d]+)_[\d]+/', $file, $numb);
 		
 		// delete file if that id isn't in food_info
-		// NOTE: there will be warnings b/c 2 of below files won't exist, but program still runs
-		if(!in_array($numb[0][0], $ids))
+		if(!in_array($numb[1], $ids))
 		{
-			unlink("/nfs/home/groups/cs50-foodfinder/web/email_images/email_image" . $numb[0][0] . ".jpg");
-			unlink("/nfs/home/groups/cs50-foodfinder/web/email_images/email_image" . $numb[0][0] . ".gif");
-			unlink("/nfs/home/groups/cs50-foodfinder/web/email_images/email_image" . $numb[0][0] . ".png");
+			print (" idd ". $numb[1]);
+
+			if(file_exists("/nfs/home/groups/cs50-foodfinder/web/email_images/email_image" . $numb[0] . ".jpg"))
+			{
+				print("DELETE /nfs/home/groups/cs50-foodfinder/web/email_images/email_image" . $numb[0] . ".jpg \n");
+				unlink("/nfs/home/groups/cs50-foodfinder/web/email_images/email_image" . $numb[0]  . ".jpg");
+			}
+			else if(file_exists("/nfs/home/groups/cs50-foodfinder/web/email_images/email_image" . $numb[0] . ".png"))
+			{	
+				print("DELETE /nfs/home/groups/cs50-foodfinder/web/email_images/email_image" . $numb[0] . ".png \n"); 
+				unlink("/nfs/home/groups/cs50-foodfinder/web/email_images/email_image" . $numb[0] . ".png");
+			}
+			else if(file_exists("/nfs/home/groups/cs50-foodfinder/web/email_images/email_image" . $numb[0] . ".gif"))
+			{
+				print("DELETE /nfs/home/groups/cs50-foodfinder/web/email_images/email_image" . $numb[0] . ".gif \N"); 
+				unlink("/nfs/home/groups/cs50-foodfinder/web/email_images/email_image" . $numb[0] . ".gif");
+			}
 		}
 	}
     

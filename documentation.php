@@ -1,19 +1,19 @@
 <?php
 	$title = "Documentation";
 	require("includes/config.php");
-	require("templates/header2.php");
+	require("templates/header.php");
 ?>
 
 <div style="text-align:left">
 
 	<div id="jumpto" style="text-align:center">
-		<p class="lead"><a id="start">Food Finder's Documentation</a></p>
+		<p class="lead docstart"><a id="start">Documentation</a></p>
 		<ul class="nav nav-pills">
-		    <li class="active"><a href="#">Jump to:</a></li>
-		    <li><a href="#main">Main Page</a></li>
-		    <li><a href="#add">Manual Add</a></li>
-		    <li><a href="#digest">Daily Digest</a></li>
-		    <li><a href="#report">Report</a></li>
+		    <li class="active"><a href="documentation.php#">Jump to:</a></li>
+		    <li><a href="documentation.php#main">Main Page</a></li>
+		    <li><a href="documentation.php#add">Manual Add</a></li>
+		    <li><a href="documentation.php#digest">Daily Digest</a></li>
+		    <li><a href="documentation.php#report">Report</a></li>
 		</ul>
 	</div>
 	
@@ -34,7 +34,7 @@
 	</p>
 
 	<div class="totop">
-		<a href="#start">Jump to top</a>
+		<a href="documentation.php#start">Jump to top</a>
 		<hr>
 	</div>
 
@@ -54,7 +54,7 @@
 	</p>
 		
 	<div class="totop">
-		<a href="#start">Jump to top</a>
+		<a href="documentation.php#start">Jump to top</a>
 		<hr>
 	</div>
 
@@ -71,7 +71,7 @@
 	</p>
 		
 	<div class="totop">
-		<a href="#start">Jump to top</a>
+		<a href="documentation.php#start">Jump to top</a>
 		<hr>
 	</div>
 	
@@ -86,7 +86,7 @@
 	</p>
 	
 	<div class="totop">
-		<a href="#start">Jump to top</a>
+		<a href="documentation.php#start">Jump to top</a>
 		<hr>
 	</div>
 	

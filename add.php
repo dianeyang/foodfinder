@@ -132,6 +132,8 @@
 					$_POST["title"],$name, $id1);
 					fclose($file);
 		
+                    // set permissions
+                    chmod('/nfs/home/groups/cs50-foodfinder/web/html_emails/html_email' . $id1 . '.html', 0644);
 		
 					// add event to database if not there already
 					if (!query("SELECT * FROM food_info WHERE month = ? AND day = ? AND hour = ? AND 

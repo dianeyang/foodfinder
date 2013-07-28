@@ -11,7 +11,8 @@
             <div class="form-inline">
             	Event name:
 				<select name = "event" class="span5">  
-					<option>Event Name</option>  
+					<option>Event Name</option>
+					<option>General Comments</option> 
 					<?php
 						foreach($events as $event)
 						{
@@ -61,4 +62,4 @@
 </div>
 
 <!-- back button -->
-<a href="/cs50-foodfinder";>Back to Event Listings</a>
+<a href="";>Back to Event Listings</a>

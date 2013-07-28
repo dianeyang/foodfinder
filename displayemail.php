@@ -12,8 +12,10 @@
 		
 		$row = query("SELECT * FROM food_info WHERE id = ?", $id);
 		
+		$title = $row[0]["title"];
+		
 		// render header
-		require("templates/header_no_modal.php");
+		require("templates/header.php");
 		
 		if (!empty($row[0]["title"]))
 		{

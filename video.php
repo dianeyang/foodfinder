@@ -1,7 +1,7 @@
 <?php
 	$title = "Video";
 	require("includes/config.php");
-	require("templates/header2.php");
+	require("templates/header.php");
 	
 ?>
 

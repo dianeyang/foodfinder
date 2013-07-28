@@ -170,11 +170,7 @@ def save_image(db, part, ext, htmlpath, email_num, img_num):
 	
 	html_file = open(htmlpath,"w")
 	imgpattern = re.compile(r'<img.*?cid:.*?>', re.DOTALL)
-	#messagetext = re.subn(imgpattern,"<a href='http://www.google.com'>CLICK HERE " + str(img_num) + "</a>", messagetext, 1)
-	#messagetext = re.subn(imgpattern,"<img src='/cs50-foodfinder/email_images/" + img_name + "'>", messagetext, 1)
-	#messagetext = re.subn(imgpattern,'<img src="/cs50-foodfinder/email_images/' + img_name + '">', messagetext, 1)
-	if messagetext[1] > 0:
-		print str(messagetext[1]) + " REPLACED IMAGE " + str(img_num)
+	messagetext = re.subn(imgpattern,"<img src='http://hcs.harvard.edu/cs50-foodfinder/email_images/" + img_name + "'>", messagetext)
 	html_file.write(messagetext[0])
 	html_file.close()
 	

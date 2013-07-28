@@ -99,4 +99,4 @@
 </div>
 
 <!-- back button -->
-<a href="/cs50-foodfinder">Back to Event Listings</a>
+<a href="/">Back to Event Listings</a>

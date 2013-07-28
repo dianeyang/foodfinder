@@ -1,25 +1,25 @@
 <?php
 	$title = "Design";
 	require("includes/config.php");
-	require("templates/header2.php");
+	require("templates/header.php");
 ?>
 
 <div style="text-align:left">
 
 	<div id="jumpto" style="text-align:center">
-		<p class="lead"><a id="start">Food Finder's Design</a></p>
+		<p class="lead docstart"><a id="start">Design</a></p>
 		<ul class="nav nav-pills">
-			<li class="active"><a href="#">Jump to:</a></li>
-		    <li><a href="#backend">Back End</a></li>
-		    <li><a href="#features">Other Features</a></li>
-		    <li><a href="#frontend">Front End</a></li>
-		    <li><a href="#major">Major Design Decisions</a></li>
+			<li class="active"><a href="design.php#">Jump to:</a></li>
+		    <li><a href="design.php#backend">Back End</a></li>
+		    <li><a href="design.php#features">Other Features</a></li>
+		    <li><a href="design.php#frontend">Front End</a></li>
+		    <li><a href="design.php#major">Major Design Decisions</a></li>
 		</ul>
 	</div>
 
 	<p class="lead"><a id="backend">Back End:</a></p>
 	<p>
-		Every six hours, a cron job runs popdownloader.py and downloads all the emails in our harvardfoodfinder@gmail.com 
+		Every hour, a cron job runs popdownloader.py and downloads all the emails in our harvardfoodfinder@gmail.com 
 		email account that have not previously been downloaded. It saves both the plaintext version 
 		(for the purpose of parsing), the HTML version (for the purpose of displaying on the website), and inline images
 		(which it inserts into the HTML version of the email). 
@@ -95,7 +95,7 @@
 	<br/>
 	
 	<div class="totop">
-		<a href="#start">Jump to top</a>
+		<a href="design.php#start">Jump to top</a>
 		<hr>
 	</div>
 	
@@ -144,7 +144,7 @@
 	</ul>
 
 	<div class="totop">
-		<a href="#start">Jump to top</a>
+		<a href="design.php#start">Jump to top</a>
 		<hr>
 	</div>
 	
@@ -164,7 +164,7 @@
 	<br/>
 	
 	<div class="totop">
-		<a href="#start">Jump to top</a>
+		<a href="design.php#start">Jump to top</a>
 		<hr>
 	</div>
 	
@@ -250,7 +250,7 @@
     </p>
     
 	<div class="totop">
-		<a href="#start">Jump to top</a>
+		<a href="design.php#start">Jump to top</a>
 		<hr>
 	</div>
 	

@@ -3,7 +3,7 @@
 			
 			<!-- include copyright-->
             <div id="bottom">
-                Made by <a href="mailto:dianeyang@college.harvard.edu"> Diane Yang</a> '16 & <a href="mailto:ksoffen@college.harvard.edu">Kim Soffen</a> '16
+                <div style="margin-top:10px;">Made by <a href="mailto:dianeyang@college.harvard.edu"> Diane Yang</a> '16 & <a href="mailto:ksoffen@college.harvard.edu">Kim Soffen</a> '16</div>
             </div>
 
         </div>

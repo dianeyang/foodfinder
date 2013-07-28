@@ -1,29 +1,9 @@
                 </div>
             </div>
 			
-		<table class="centeralignment">
-		<tr>
-			<td style="width:70px; padding:30px;">
-					<a href="./digest.php" onmousemove="changeimage('mailinglist', './html/img/mailinglist-red.png')" onmouseout="changeimage('mailinglist', './html/img/mailinglist.png')">
-						<img id="mailinglist" src="./html/img/mailinglist.png"/>
-					</a>
-				</td>
-				<td style="width:70px; padding:30px;">
-					<a href="http://www.facebook.com/pages/Harvard-Food-Finder/396601167087384?ref=hl" onmousemove="changeimage('facebook', './html/img/facebook-red.png')" onmouseout="changeimage('facebook', './html/img/facebook.png')">
-						<img id="facebook" src="./html/img/facebook.png"/>
-					</a>
-				</td>
-				<td style="width:70px; padding:30px;" onmousemove="changeimage('twitter', './html/img/twitter-red.png')" onmouseout="changeimage('twitter', './html/img/twitter.png')">
-					<a href="http://www.twitter.com/harvardfoodfind">
-						<img id="twitter" src="./html/img/twitter.png"/>
-					</a>
-				</td>
-			</tr>
-		</table>
-			
 			<!-- include copyright-->
             <div id="bottom">
-                Made by <a href="mailto:dianeyang@college.harvard.edu"> Diane Yang</a> '16 & <a href="mailto:ksoffen@college.harvard.edu">Kim Soffen</a> '16
+                <div style="margin-top:10px;">Made by <a href="mailto:dianeyang@college.harvard.edu"> Diane Yang</a> '16 & <a href="mailto:ksoffen@college.harvard.edu">Kim Soffen</a> '16</div>
             </div>
 
         </div>

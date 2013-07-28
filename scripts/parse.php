@@ -56,12 +56,17 @@
 					 $s = str_replace($line, "", $s);
 			}
 			
+			
 			// separate string into its words for parsing
 			$words = preg_split('/\s+/',$s,-1,PREG_SPLIT_NO_EMPTY); 
 			
 			// add additional item to array so can check last word 
 			$words[] = NULL;
 		
+			// special case to check for time outside of word loop
+			$is_time = special_time($s);
+		
+			$oldword = "";
 			foreach($words as $word)
 			{
 				
@@ -72,7 +77,7 @@
 				
 				// adjust for end of array
 				if ($word === end($words))
-					$word = $oldword;      
+					$word = $oldword;   
 				
 				// initialize tracking variables
 				$is_date = $is_time = 0;   
@@ -90,8 +95,10 @@
 					search_place($oldword, $word);
 				
 				// check for rsvp
-				if ($rsvp == "No" && ($word == "rsvp" || $word == "lottery") && $oldword != "no")
-					$rsvp = "Yes";
+				if ($rsvp == "No" && ($word == "rsvp" || $word == "lottery" || $word == "application" || $word == "sign-up" || $word == "apply" || $word == "registration" || $word == "register") && $oldword != "no")
+					{$rsvp = "Yes"; print($word);}
+				if ($rsvp == "No" && $oldword == "sign" && $word == "up")
+					{$rsvp = "Yes"; print($word . "2");}
 											   
 				// keep track of past word
 				$oldword = $word;
@@ -100,8 +107,7 @@
 	
 	   // capitalize building name
 	   $place_info["b"] = ucwords($place_info["b"]);
-         
-
+		
 	   // check that event not already in database and add  
 	   $check = query("SELECT * FROM food_info WHERE month = ? AND day = ? AND hour = ? AND 
 	   minute = ? AND ampm = ? AND building = ?", $date_info['m'], $date_info['d'], 
@@ -110,9 +116,10 @@
 	   if (empty($check) && $date_info['m'] != NULL)
 		{
 			$query = query("INSERT INTO food_info (id, added, title, month, day, year, hour, minute, 
-			ampm, building, room, rsvp) VALUES (?, now(), ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-			$row["id"], $row["subject"], $date_info['m'], $date_info['d'], $date_info['y'], $time_info['h'],
-			$time_info['m'], $time_info['ap'], $place_info['b'], $place_info['r'], $rsvp);
+			ampm, hour2, minute2, ampm2, building, room, rsvp) VALUES (?, now(), ?, ?, ?, ?, ?, ?, ?, 
+			?, ?, ?, ?, ?, ?)", $row["id"], $row["subject"], $date_info['m'], $date_info['d'], 
+			$date_info['y'], $time_info['h'], $time_info['m'], $time_info['ap'], $time_info2['h'],
+			$time_info2['m'], $time_info2['ap'], $place_info['b'], $place_info['r'], $rsvp);
 		 }
 	
 	// update in email database that email has been parsed
@@ -312,11 +319,93 @@
             return false;
     }
     
+    function special_time($s)
+    {
+		 global $time_info;
+		 global $time_info2;
+		
+		// account for '6-7' etc; note dash is reqd
+
+		$match = array();
+		if (preg_match("/\d{1,2}(\:\d{2})?[\s]{0,1}([amp]{2})?[\s]{0,1}\-[\s]{0,1}\d{1,2}(\:\d{2})?[\s]{0,1}([amp]{2})?/", $s, $match))
+		{
+			// split up time into start/end and hour/min
+			$temp2 = explode("-", $match[0]);
+			
+			// ampm for start
+			if(preg_match("/[am]{2}/", $temp2[0]))
+				$time_info['ap'] = 'am';
+			else if(preg_match("/[pm]{2}/", $temp2[0]))
+				$time_info['ap'] = 'pm';
+			$temp2[0] = preg_replace("/[amp]{2}/", "", $temp2[0]);
+			
+			// ampm for end
+			if(preg_match("/[am]{2}/", $temp2[1]))
+				$time_info2['ap'] = 'am';
+			else if(preg_match("/[pm]{2}/", $temp2[1]))
+				$time_info2['ap'] = 'pm';
+			$temp2[1] = preg_replace("/[amp]{2}/", "", $temp2[1]);
+			
+			// split into hours/minutes
+			$start = explode(":", $temp2[0]);
+			$end = explode(":", $temp2[1]);
+		  
+			// start time hour
+			$time_info['h'] = $start[0];
+			
+			// check if start time has minutes
+			if(empty($start[1]))
+				$time_info['m'] = '00';
+			else
+				$time_info['m'] = $start[1];
+			
+			// end time hour
+			$time_info2['h'] = $end[0];
+			
+			// check if end time has minutes
+			if(empty($end[1]))
+				$time_info2['m'] = '00';
+			else
+				$time_info2['m'] = $end[1];
+						
+			 // betting on correct am/pm for end time- if no info given
+			 if ($time_info2['h'] == 11 && $time_info2['ap'] == NULL)
+				$time_info2['ap'] = 'am';
+			 else if ($time_info2['h'] != NULL && $time_info2['ap'] == NULL)
+				$time_info2['ap'] = 'pm';
+		
+			// betting on correct am/pm for end time- if no info given
+			if ($time_info['h'] == 11 && $time_info['ap'] == NULL)
+				$time_info['ap'] = 'am';
+			else if ($time_info['h'] != NULL && $time_info['ap'] == NULL)
+				$time_info['ap'] = 'pm';
+		
+			// checks that #s are valid
+          	if ($time_info2['h'] > 12 || $time_info2['h'] < 1 || $time_info2['m'] < 0 || $time_info2['m'] > 59 || 
+                !preg_match("/^[0-9]+$/", $time_info2['h']) || !preg_match("/^[0-9]+$/", $time_info2['m']) ||
+                $time_info['h'] > 12 || $time_info['h'] < 1 || $time_info['m'] < 0 || $time_info['m'] > 59 || 
+                !preg_match("/^[0-9]+$/", $time_info['h']) || !preg_match("/^[0-9]+$/", $time_info['m']))
+          	{
+            	$time_info2['h'] = NULL;
+              	$time_info2['m'] = NULL;
+              	$time_info2['ap'] = NULL;
+              	$time_info['h'] = NULL;
+              	$time_info['m'] = NULL;
+              	$time_info['ap'] = NULL;
+          	}
+	 	 }
+	 	 				
+		if($time_info['h'] != NULL)
+			return true;
+		else
+			return false;
+	 } 
+    
     // find time within email parse
     function search_time($oldword, $word)
     {         
-         global $time_info;
-         
+		global $time_info;
+		
 		// word cases: noon and midnight
     	if ($word == "noon")
     	{
@@ -331,6 +420,8 @@
     		$time_info['m'] = '00';
     		$time_info['ap'] = 'am';
     	}
+         
+         
          
     	// if 'pm' or 'am' is in the word
         else if ((strpos($word, 'pm')) !== false || (strpos($word, 'am')) !== false
@@ -382,22 +473,6 @@
               	$time_info['m'] = '00';
           	}
           
-          	// account for '6-7' etc
-          	if (preg_match("/^\d{1,2}(\:\d{2})?\-\d{1,2}(\:\d{2})?/", $oldword))
-         	{
-            	$temp2 = explode("-", $oldword);
-              	$start = explode(":", $temp2[0]);
-              	$end = explode(":", $temp2[1]);
-              
-              	$time_info['h'] = $start[0];
-              
-              	// check if start time has minutes
-              	if(empty($start[1]))
-            		$time_info['m'] = '00';
-              	else
-              	  	$time_info['m'] = $start[1];	       
-          	}
-          
           	// checks that #s are valid
           	if ($time_info['h'] > 12 || $time_info['h'] < 1 || $time_info['m'] < 0 || $time_info['m'] > 59 || 
                 !preg_match("/^[0-9]+$/", $time_info['h']) || !preg_match("/^[0-9]+$/", $time_info['m']))
@@ -420,6 +495,7 @@
 				  	else
 					  	$time_info['ap'] = 'pm';		
               	}
+              	
               	return true;
           	}
           	else

@@ -210,7 +210,7 @@
             extract($values);
 
             // render header
-            require("templates/header_modal.php");
+            require("templates/header.php");
 
             // render template
             require("$template");
@@ -226,45 +226,10 @@
         }
     }
 
-    function render_no_modal($template, $values = array())
+    function geturl($server)
     {
-        // if template exists, render it
-        if (file_exists("$template"))
-        {
-            // extract variables into local scope
-            extract($values);
-            
-		    $detect = new Mobile_Detect();
-			if ($detect->isMobile())
-			{			
-				// render header
-				require("mobile/mtemplates/header_no_modal.php");
-				
-				// render template
-				require("mobile/m$template");
-	
-				// render footer
-				require("mobile/mtemplates/footer.php");
-            }
-            
-            else
-            {
-				// render header
-				require("templates/header_no_modal.php");
-	
-				// render template
-				require("$template");
-	
-				// render footer
-				require("templates/footer.php");
-            }
-        }
-
-        // else err
-        else
-        {
-            trigger_error("Invalid template: $template", E_USER_ERROR);
-        }
+        $url="http://".$server['HTTP_HOST'].$server['REQUEST_URI'];
+        return $url;
     }
 
 ?>

@@ -43,13 +43,16 @@ for message in messages:
     row = cursor.fetchone()
     num = row[0]
     
-    # remove Fwd:/Re: (or variants thereof) and line breaks from subject of email
+    # trim off Fwd:/Re: (or variants thereof) and line breaks from subject of email
     pattern = re.compile(r'(f|F)(w|W)(d|D)?: ')
     subject = re.sub(pattern,"", message['subject'])
     pattern = re. compile(r'(r|R)(e|E): ')
     subject = re.sub(pattern,"", subject)
+    
+    # remove newlines & escape special characters (they screw up database entries)
     pattern = re.compile(r'\n')
     subject = re.sub(pattern, "", subject)
+    subject = re.escape(subject)
     
     # prepare the file paths
     plainpath = "/nfs/home/groups/cs50-foodfinder/web/plaintext_emails/plaintext_email"+str(num)+".txt"
@@ -80,9 +83,18 @@ for message in messages:
             messagetext = part.get_payload(decode=True)
             
             # remove Fwd: headers from top of email
-            headerpattern = re.compile(r'-----.*?To:.*?<br>(Cc:.*?<br>)?(Bcc:.*?<br>)?', re.DOTALL)
-            messagetext = re.sub(headerpattern, "", messagetext)
-            html_file.write(messagetext)
+            headerpattern = [re.compile(r'-----.*?To:.*?<br>(Cc:.*?<br>)?(Bcc:.*?<br>)?', re.DOTALL), re.compile(r'Sent from my iPhone', re.DOTALL), re.compile(r'-----.*?From:.*?<br>Date:.*?<br>To:.*?<br>(Cc:.*?<br>)?(Bcc:.*?<br>)?Subject:.*?<br>', re.DOTALL)]
+            for header in headerpattern:
+            	messagetext = re.sub(header, "", messagetext)
+            newtext = "".join(messagetext.split("\n"))
+            newpattern = re.compile(r'(.*?)(\-\-<\/div>.*br><\/div>)', re.DOTALL)
+            match = re.match(newpattern, newtext)
+            if match:
+            	match2 = match.group(1)
+            	newtext2 = re.sub(newpattern, match2, newtext)
+            else:
+            	newtext2 = messagetext
+            html_file.write(newtext2)
             html_file.write("</div>")
             html_file.close()
             continue

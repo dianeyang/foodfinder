@@ -11,7 +11,7 @@
 <?php
 if ($message == "This event has been deleted.")
 	print '<!-- back to homepage button-->
-		<a href="/cs50-foodfinder/">Back to Event Listings</a>';
+		<a href="/">Back to Event Listings</a>';
 
 else
 	print '<!-- back button-->

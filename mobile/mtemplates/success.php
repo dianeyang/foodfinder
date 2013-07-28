@@ -8,4 +8,4 @@
     <?= htmlspecialchars($message) ?>
 </p>
 
-<a href="/cs50-foodfinder">Back to Event Listings</a>
+<a href="http://www.harvardfoodfinder.com">Back to Event Listings</a>

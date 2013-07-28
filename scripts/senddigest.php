@@ -29,7 +29,7 @@
 				</html>";
     
     // prepare the image header
-    $image = "<div><img src=\"http://hcs.harvard.edu/cs50-foodfinder/html/img/food-finder-logo.jpg\"></div>";
+    $image = "<div><a href=\"http://www.harvardfoodfinder.com\"><img src=\"http://hcs.harvard.edu/cs50-foodfinder/html/img/dailydigestheader.png\"></a></div><br/>";
     
     // prepare the footer message
     $footer = "You are receiving this email because you have subscribed to Daily Digest emails from
@@ -38,53 +38,46 @@
     here</a>.";
 	
 	// generate message
-	$events = query("SELECT * FROM food_info WHERE day = ? AND month = ? ORDER BY hour, minute", $date["mday"], $date["mon"]);
-	
-	// no events found
-	if (empty($events))
-    {
-		$message = "<p>Good Morning!</p>
-                    <p>As the semester winds down, less and less free food is available, so we are temporarily halting Daily Digest emails until Wintersession begins before spring semester.</p>
-                    <p>Thank you using our service, and we expect free food events to be much more plentiful next semester!</p>
-                    <p>Good luck with finals!</p>";
-        
-        // concatenate each part of the message
-        $message = $htmlstart . $image . $message . $footer . $htmlend;
-	}
-    
+	$events = query("SELECT * FROM food_info WHERE day = ? AND month = ? ORDER BY ampm, hour, minute", $date["mday"], $date["mon"]);
+    print_r($events);
 	// events found
-	else
+	if (!empty($events))
 	{
 		// set intro to email, default events, and footer
 		$message1 = "Good morning! The free food events for today are listed below. Click to see more information.";
-		$list = "";
 		
 		// go through each event today
 		// convert sql entry to readable English form
+		
 		foreach($events as &$event)
-			$row[] = '<li>' . '<a href=\'http://www.hcs.harvard.edu/cs50-foodfinder/displayemail.php?id=' . $event['id'] . '\'>'
-					 . $event['title'] . ': ' . $event['hour'] . ':' . $event['minute'] . ' ' . $event['ampm']
-					 . ' at ' . $event['building'] . ' ' . $event['room'] . '</a>'. '<br/><br/></li>';
+		{
+			$entry = '<li>' . '<a href=\'http://www.hcs.harvard.edu/cs50-foodfinder/displayemail.php?id=' . $event['id'] . '\'>'
+					 . $event['title'] . ': ' . $event['hour'] . ':' . $event['minute'] . ' ' . $event['ampm'];	 
+			if($event['hour2'] != NULL)
+				$entry = $entry . ' - ' . $event['hour2'] . ':' . $event['minute2'] . ' ' . $event['ampm'];
+			if($event["building"] != NULL)
+				$entry = $entry. ' at ' . $event['building'] . ' ' . $event['room'];
+			$entry = $entry . '</a>'. '<br/><br/></li>';
+			$row[] = $entry;
+		}
 		
 		// put all event rows into 1 message
 		foreach($row as $ro)
 			$message2 = $message2 . $ro;
 			
 		// add to intro, message, and html start & end tags
-		$message = $htmlstart. $image. $message1 . "<br/><ul>" . $list . "</ul>" . $footer . $htmlend;
-	}
+		$message = $htmlstart. $image. $message1 . "<br/><ul>" . $message2 . "</ul>" . $footer . $htmlend;
 	
-	// set headers for email
-	$headers = "MIME-Version: 1.0" . "\r\n";
-	$headers .= "Content-type:text/html;charset=iso-8859-1" . "\r\n";
-	$headers .= 'From: <harvardfoodfinder@gmail.com>' . "\r\n";
-	
-	// send to everyone on list
-	$users = query("SELECT * FROM dailydigest");
-	foreach($users as $user)
-	{
-		$to = $user["email"];
-		mail($to, $subject, $message, $headers);
+		echo '2';
+		// set headers for email
+		$headers = "MIME-Version: 1.0" . "\r\n";
+		$headers .= "Content-type:text/html;charset=iso-8859-1" . "\r\n";
+		$headers .= 'From: <harvardfoodfinder@gmail.com>' . "\r\n";
+		
+		// send to everyone on list 
+		$users = query("SELECT * FROM dailydigest");
+		foreach($users as $user)
+			mail($user["email"], $subject, $message, $headers);
 	}
-
+		
 ?>

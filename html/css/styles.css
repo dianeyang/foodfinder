@@ -1,0 +1,493 @@
+/****************************************************************************
+ * styles.css
+ *
+ * Computer Science 50
+ * Problem Set 7
+ *
+ * Global CSS.
+ ***************************************************************************/
+
+a:link, a:visited, a:active
+{
+	color: #F00;
+	text-decoration:none;
+}
+
+a:hover
+{
+	color: #000;
+	text-decoration:none;
+	cursor: pointer;
+}
+
+body
+{
+    background-color: #EAEAEA;
+	line-height: normal;
+	font-family: 'PT Sans';
+}
+
+input, button, select, textarea 
+{
+	font-family: 'PT Sans';
+}
+
+hr
+{
+    margin: 3px;
+}
+
+.addtogcal
+{
+    white-space: normal;
+    font-size: 14px;
+}
+
+.btn
+{
+	background-image: none;
+	border: 0px;
+	border-radius: 0px;
+	background-color: #CCCCCC;
+	box-shadow: none;
+}
+
+.btn-primary
+{
+    background-color: #000;
+}
+.btn-primary:hover
+{
+    background-color: #f00;
+}
+
+.container
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: 100%;
+}
+
+.dropdown-menu
+{
+    border-radius: 5px;
+}
+
+/* title of event in listing table */
+.eventtitle
+{
+    margin-right: 10px;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.nav-pills > .active > a
+{
+	color: #000;
+	font-weight: 700;
+	background-color: #fff;
+}
+
+.nav-pills > .active > a:hover
+{
+	background-color: #fff;
+}
+
+#start
+{
+	font-size: 25px;
+	font-weight: 700;
+}
+
+.docstart
+{
+	margin-bottom: 5px;
+}
+
+.lead a
+{
+	color: #000;
+	font-weight: 700;
+}
+
+.table .datetime
+{
+    font-family: 'Dosis';
+    text-transform: uppercase;
+    color: #f00;
+
+    width: 60px;
+    max-width: 60px;
+    height: 60px;
+    max-height: 60px;
+    white-space: nowrap;
+    line-height: 1;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.date
+{
+    font-size: 24px;
+}
+
+.time
+{
+    font-size: 12px;
+    line-height: 0;
+}
+
+.order
+{
+	display: inline-block;
+	margin-left: 4px;
+}
+
+.orderbtn
+{
+	background-color: #fff;
+	border: none;
+}
+
+.table .gcalbox
+{
+	background-color: #f00;
+	color: #fff;
+	width: 60px;
+	height: 60px;
+	text-transform: uppercase;
+	font-family: 'Dosis';
+	text-align: left;
+	line-height: 1;
+	margin: 6px 6px 0 0;
+}
+
+
+.gcalbox > .gcallink
+{
+	display: none;
+}
+
+.gcalbox:hover
+{
+	background-color: #000;
+	cursor: pointer;
+}
+
+.gcalbox:hover > .datetime2
+{
+	display: none;
+}
+
+.gcalbox:hover > .gcallink
+{
+	color: #fff;
+	display: inline;
+	text-align: left;
+}
+
+.modal
+{
+	border-radius: 5px;
+	width: auto;
+	height: auto;
+	top: auto;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin: 50px 100px 50px 100px;
+	padding: 0px;
+}
+
+#myModalLabel
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.modal-body
+{
+    position: absolute;
+    top: 49px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    max-height: none;
+}
+
+.modal-footer
+{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 32px;
+}
+
+.modal.fade
+{
+    -webkit-transition: opacity .05s linear, none;
+    -moz-transition: opacity .05s linear, none;
+    -ms-transition: opacity .05s linear, none;
+    -o-transition: opacity .05s linear, none;
+    transition: opacity .05s linear, none;
+    top: 0px;
+}
+
+.modal.fade.in
+{
+    top: 0px;
+}
+
+.modalshare
+{
+	display: inline-block;
+}
+
+.modal-footer .btn + .btn, .modalbtn
+{
+	margin-bottom: 25px;
+	margin-left: 5px;
+}
+
+.navbar
+{
+    position: fixed;
+    width: 100%;
+    height: 34px;
+    left: 0px;
+    margin-top: 70px;
+    margin-bottom: 0px;
+    box-shadow: 0px 2px 3px rgba(0,0,0, .2);
+    z-index: 1000;
+    
+    /* no highlighting allowed */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.navbar li
+{
+    line-height: 1;
+}
+
+.navbar-inner
+{
+    min-height: 0px;
+    height: 32px;
+    padding-right: 0px;
+}
+
+.nav > li > a:hover
+{
+    text-decoration: none;
+    background-color: transparent;
+    color: #000;
+}
+
+.nav-pills > .active > a, .nav-pills > .active > a:hover 
+{
+    color: #000;
+}
+
+.dropdown-menu li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a
+{
+    background-image: none;
+    background-color: #ddd;
+    color: #000;
+}
+
+.pageheader
+{
+    color:black;
+    font-family:'Dosis', sans-serif;
+    font-size: 40px;
+    line-height: .75;
+    margin: 0px;
+    position: fixed
+    width: 100%
+}
+
+.pageheader small
+{
+    font-size: 20px;
+}
+
+.iconlink
+{
+    width:50px;
+}
+
+.totop
+{
+	text-align: right;
+	font-weight: bold;
+}
+
+#reportbutton
+{
+	float: right;
+	margin-right: 0px;
+}
+
+.rsvp
+{
+    font-size: 11px;
+    text-transform: uppercase;
+    font-family: 'Dosis';
+    border: 1px solid #000;
+    white-space: nowrap;
+}
+
+.spanhr
+{
+	width: 70px;
+}
+
+.spanmin
+{
+	width: 60px;
+}
+
+.spanampm
+{
+	width: 85px;
+}
+
+.spandate
+{
+	width: 210px;
+}
+
+.spanloc
+{
+	width: 250px;
+}
+
+#top
+{
+    background-color: #FFFFFF;
+    position: fixed;
+    width: 100%;
+    min-width: 900px;
+    max-height: 100px;
+    left: 0px;
+    right: 0px;
+    z-index: 1000;
+    
+    /* no highlighting allowed */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#email
+{
+	text-align: left;
+}
+
+#headertable
+{
+    table-layout:fixed;
+    margin: 5px 0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Dosis';
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+#headertable a
+{
+	color: #000000;
+	background-color: transparent;
+}
+
+#headertable a:hover
+{
+	color: #f00;
+}
+
+#middle
+{
+    /* center contents */
+    text-align: center;
+    overflow-y: auto;
+    padding-bottom: 70px;
+    padding-top: 125px;
+    min-width: 400px;
+}
+
+#middle .nav
+{
+    display: inline-block;
+}
+
+#middlebody
+{
+    box-sizing: border-box;
+    width: 95%;
+    min-width: 400px;
+    background-color: #FFFFFF;
+    padding: 25px;
+}
+
+#moreoptions-dropdown
+{
+    margin: 10px 0 0 -115px;
+}
+
+#moreoptions li.dropdown > .dropdown-toggle .caret 
+{
+    border-top-color: #f00;
+    border-bottom-color: #f00;
+}
+
+#moreoptions li.dropdown.open > .dropdown-toggle .caret
+{
+    border-top-color: #000;
+    border-bottom-color: #000;
+}
+
+#bottom
+{
+    /* font specifications */
+    font-family: 'Dosis';
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #999;
+    font-size: smaller;
+
+	/* center contents */
+    text-align: center;
+    
+	/* positioning */
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 32px;
+	margin-top: 20px;
+	
+	/* background color */
+    background-color: black;  
+}
+
+#bottom a:hover
+{
+	color: #fff;
+}

@@ -1,0 +1,425 @@
+a
+{
+    color: #f00;
+}
+
+exta
+{
+    color: #f00;
+}
+
+a:hover
+{
+    text-decoration: none;
+}
+
+body
+{
+	background-color: #fff;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	font-family: 'PT Sans';
+
+}
+
+.addtogcal
+{
+    text-transform: uppercase;
+    width: 100px;
+    font-family: 'Dosis';
+    font-weight: 700;
+}
+
+.backbutton
+{
+    font-family: 'Dosis';
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #777;
+    height: 40px;
+    box-sizing: border-box;
+    padding-top: 12px;
+}
+
+.backbutton a:hover, a:active, a:visited
+{
+    color: #fff;
+}
+
+.container
+{
+    padding: 5px;
+}
+
+.controlgroup
+{
+    display: inline;
+}
+
+#email
+{
+    margin: 5px 10px;
+}
+
+.headertext
+{
+    font-family: 'Dosis';
+
+}
+
+.headerdiv
+{
+    background-color: #fff;
+    padding-bottom: 5px;
+}
+
+#harvard
+{
+    font-size: 16px;
+    color: #999;
+    line-height: 20px;
+}
+
+#foodfinder
+{
+    font-size: 32px;
+    color: #000;
+    line-height: 24px;
+}
+
+.navbar
+{
+    margin-bottom: 0px;
+    box-shadow: 0px 2px 5px rgba(0,0,0, .2);
+}
+
+.radio.inline + .radio.inline
+{
+    margin-right: 10px;
+    margin-left: 0px;
+}
+
+.form-inline .radio
+{
+    margin-right: 10px;
+}
+
+.sharebuttons
+{
+    right: 0px;
+    position: absolute;
+}
+
+.shareoptions
+{
+    background-color: #777;
+    font-family: 'Dosis';
+    position: static;
+    width: 100%;
+    box-width: border-box;
+    padding: 5px 0px 5px 0px;
+    text-align: center;
+}
+
+.sharingoptions a
+{
+    color: #fff;
+    font-family: 700;
+}
+
+.addtogcal a
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/************************************ DOCUMENTATION & DESIGN **********************************/
+
+#start
+{
+	font-size: 25px;
+	font-weight: 700;
+}
+
+.lead a
+{
+	color: #000;
+	font-weight: 700;
+}
+
+.nav-pills > .active > a {
+color: #000;
+font-weight: 700;
+background-color: #fff;
+}
+
+/***************************** STUFF FROM THE PACKAGE WE DOWNLOADED ***************************/
+
+/* email listing */
+#main.t-boutique-p-blogdate ul.news li {
+	position: relative;
+	overflow: hidden;
+    border-bottom: 1px solid #ddd;
+}
+
+/* background of email listing */
+header form, .detailsTable, .search .searchNum, .t-boutique-p-single #addtocart #selectModel, 
+#main.t-boutique-p-ecogallerygrid ul.gallery-grid li, #main.t-boutique-p-blog ul.news li,
+#main.t-boutique-p-ecogallerylist ul.gallery-list li, #main.t-boutique-p-gallerygrid ul.gallery-grid li,
+#main.t-boutique-p-gallerylist ul.gallery-list li, #main.t-boutique-p-search ul.gallery-list li,
+#main.t-boutique-p-search ul.news li, .t-boutique-p-single #addtocart #selectModel,
+#main.t-boutique-p-blogdate ul.news li, .searchInfo, ul.results li {
+	background-color: #fff;
+}
+
+/* time background */
+#main ul.date li a time, .searchNum {
+	background-color: #f00;
+	font-family: 'Dosis';
+	color: #fff;
+}
+
+/* DATE TIME YEAR COLOR */
+#main ul.gallery-grid li.more a, .detail .price span, #main ul.news li.more a p, 
+#main ul.gallery-list li.more a p, nav ul li, nav ul li a, #main ul.date li a time span.m,
+.t-boutique-p-single .back a, .t-boutique-p-post article .back a {
+	color: #fff;
+}
+
+#main ul.date li a time span.d, .search .searchFor, #main.t-boutique-p-ecogallerygrid ul.gallery-grid li a span.price {color: #d6d6d6;}
+#main ul.date li a time span.y {color: #fff;}
+
+.t-boutique-p-single #addtocart #submitCart, .t-boutique-p-contact ul.getcontact li a, 
+#main.t-boutique-p-cart ul.articlesCart li span.price, #main.t-boutique-p-cart .checkout,
+#main.t-boutique-p-ecogallerylist ul.gallery-list li a span.price,
+#main.t-boutique-p-gallerygrid ul.gallery-grid li a span.price,
+#main.t-boutique-p-gallerylist ul.gallery-list li a span.price,
+#main.t-boutique-p-search ul.gallery-list li a span.price, .t-boutique-p-single #addtocart #submitCart,
+#main.t-boutique-p-blogdate ul.date li a time span.d, .searchNum {
+	color: #fff;
+}
+
+/* email descriptions in listing */
+h3, #main ul.news li a time, .post article time, .search .searchNum, .detailsTable ul.specsList li .def {
+	color: #000;
+}
+
+/* footer */
+.footer
+{
+    text-align : center;
+    font-weight : normal;
+    font-style : normal;
+    text-transform : uppercase;
+    font-size : 14px;
+    font-family : 'Dosis';
+    font-weight: 700;
+    color: #999;
+    background-color: #000;
+    height: 50px;
+    padding-top: 10px;
+}
+
+/* event info general styling */
+.title3
+{
+    text-align : left;
+    text-transform : none;
+    font-style : normal;
+    font-weight : normal;
+    text-decoration : none;
+    font-size : 0.9em;
+}
+
+.eventtitle
+{
+    font-size: 14px;
+    font-family: 'PT Sans';
+}
+
+.eventdetails
+{
+    color: #999;
+    font-family: 'PT Sans';
+}
+	
+header a.back, header form input#submit, #main ul.gallery-grid li.more, 
+#addtocart #submitCart, #main ul.news li.more, #main ul.gallery-list li.more,
+.t-boutique-p-contact ul.getcontact li a, ul.articlesCart li span.edit, .checkout, nav ul, nav ul li.sub-list a,
+.menu, .t-boutique-p-single .back a, .t-boutique-p-post article .back a, .t-boutique-p-contact .map:before {
+	background-color: #6b6b6b;
+}
+#main ul.gallery-grid li a span.price, #main ul.gallery-list li a span.price, 
+.detail .price span, .detail .price span, ul.articlesCart li span.price, .search .searchInfo,
+#main.t-boutique-p-search ul.gallery-list li a span.price {
+	background-color: #5e5e5e;
+}
+
+nav ul li {
+	border-color: #363636;
+}
+.logo {text-align : center ;text-transform : none ;font-style : normal ;font-weight : normal ;text-decoration : none ;font-size : 2em ;} .title {text-align : center ;text-transform : uppercase ;font-style : normal ;font-weight : normal ;text-decoration : none ;font-size : 1.5em ;} .title2 {text-align : left ;text-transform : uppercase ;font-style : normal ;font-weight : normal ;text-decoration : none ;font-size : 1.3em ;}  .title4 {text-align : center ;text-transform : uppercase ;font-style : normal ;font-weight : normal ;text-decoration : none ;font-size : 0.9em ;} .subtitle {text-align : center ;font-weight : normal ;font-style : normal ;text-transform : uppercase ;text-decoration : none ;font-size : 1.3em ;} .paragraph {text-align : left ;font-weight : normal ;font-style : normal ;text-transform : none ;text-decoration : none ;font-size : 0.8em ;font-family : Arial ;} .paragraph2 {text-align : center ;font-weight : normal ;font-style : normal ;text-transform : none ;text-decoration : none ;font-size : 0.8em ;font-family : Arial ;}
+
+.menu {text-align : left ;font-weight : normal ;font-style : normal ;text-transform : uppercase ;text-decoration : none ;font-size : 0.9em ;}
+
+
+.button {text-align : center ;font-weight : normal ;font-style : normal ;text-transform : uppercase ;text-decoration : none ;font-size : 1em ;font-family : ProximaNovaSemibold ;} 
+
+header.t-boutique-p-header h1 {
+	margin: 12px auto 0 auto;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	padding-bottom: 10px;
+	display: block;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+header.t-boutique-p-header h1 a {
+	position: relative;
+	overflow: hidden;
+	display: block;
+}
+header.t-boutique-p-header img {
+	border: 0;
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+header.t-boutique-p-header img.left {
+	float: left;
+}
+header.t-boutique-p-header img.right {
+	float: right;
+}
+
+
+
+#main.t-boutique-p-page-content h2 {
+	text-align: center;
+	margin: 4px 0;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+#main.t-boutique-p-page-content img {
+	margin-bottom: 25px;
+	display: block;
+	margin: 0 auto;
+	border: 0;
+	max-width: 100%;
+}
+
+#main.t-boutique-p-blogdate ul.news {
+	list-style: none;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+	margin: 5px 0;
+}
+
+#main.t-boutique-p-blogdate ul.news li a {
+	position: relative;
+	overflow: hidden;
+	display: block;
+	padding: 5px;
+	text-decoration: none;
+}
+#main.t-boutique-p-blogdate ul.news li.more a {
+	padding: 0;
+}
+#main.t-boutique-p-blogdate ul.news li a img 	{
+	float: left;
+	max-width: 40%;
+	margin: 0 10px 0 0;
+}
+#main.t-boutique-p-blogdate ul.news li a time {
+	float: left;
+	font-size: 0.7em;
+	width: 55%;
+	line-height: 1;
+	margin-top: 4px;
+}
+#main.t-boutique-p-blogdate ul.news li a h3 {
+	float: left;
+	margin: 0;
+	line-height: 1;
+	width: 55%;
+}
+#main.t-boutique-p-blogdate ul.news li.more, #main.t-boutique-p-blogdate ul.gallery-list li.more {
+	margin: 10px 0;
+	position: relative;
+}
+#main.t-boutique-p-blogdate ul.news li.more a p, #main.t-boutique-p-blogdate ul.gallery-list li.more a p {
+	text-transform: uppercase;
+	padding-left: 20px;
+	line-height: 1.3em;
+}
+#main.t-boutique-p-blogdate ul.news li.more a:hover p, #main.t-boutique-p-blogdate ul.gallery-list li.more a:hover p {
+	text-decoration: underline;
+}
+#main.t-boutique-p-blogdate ul.news li.more a p:before, 
+#main.t-boutique-p-blogdate ul.gallery-list li.more a p:before {
+	content: "";
+	display:inline-block;
+	width: 12px;
+	height: 11px;
+	background-image: url('http://www.onbile.com/nbproject/private/blog_boutique/media/img/sub-list.png');
+	position: absolute;
+	top: 22px;
+	right: 27px;
+}
+
+#main.t-boutique-p-blogdate ul.date li a time {
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	margin: 0 10px 0 0;
+}
+#main.t-boutique-p-blogdate ul.date li a time span {
+	display: block;
+}
+#main.t-boutique-p-blogdate ul.date li a time span.d {font-size: 2.5em;}
+#main.t-boutique-p-blogdate ul.date li a time span.m {font-size: 1.2em; text-transform: uppercase;}
+#main.t-boutique-p-blogdate ul.date li a time span.y {font-size: 1.3em;}
+#main.t-boutique-p-blogdate ul.date li a h3 { width: 75%; }
+
+#main.t-boutique-p-post img {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+#main.t-boutique-p-post article time {
+	font-size: 0.7em;
+	text-transform: uppercase;
+}
+#main.t-boutique-p-post article h3 {
+	margin-top: 0;
+	line-height: 1;
+}
+
+.t-boutique-p-post article .back a {
+	position: relative;
+	overflow: hidden;
+	display: block;
+	padding: 13px;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding-left: 20px;
+	line-height: 1.3em;
+	margin: 16px 0;
+}
+.t-boutique-p-post article .back a:before {
+	content: "";
+	display:inline-block;
+	width: 8px;
+	height: 15px;
+	background-image: url('http://www.onbile.com/nbproject/private/blog_boutique/media/img/back.png');
+	position: absolute;
+	top: 15px;
+	right: 27px;
+}

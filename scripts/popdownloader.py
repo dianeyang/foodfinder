@@ -14,6 +14,7 @@
 # Borrowed code from http://stackoverflow.com/questions/1225586/checking-email-with-python
 
 from filterfunctions import *
+from config import email_address, password
 
 # Open database connection
 db = MySQLdb.connect("mysql.hcs.harvard.edu","cs50-foodfinder","OpUwJlywmvty","cs50-foodfinder")
@@ -23,8 +24,8 @@ cursor = db.cursor()
 
 # login info
 pop_conn = poplib.POP3_SSL('pop.gmail.com')
-pop_conn.user('harvardfoodfinder@gmail.com')
-pop_conn.pass_('canadayf34')
+pop_conn.user(email_address)
+pop_conn.pass_(password)
 
 # Get messages from server:
 messages = [pop_conn.retr(i) for i in range(1, len(pop_conn.list()[1]) + 1)]

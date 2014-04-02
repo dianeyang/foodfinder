@@ -1,7 +1,3 @@
 #Harvard Food Finder
 
-This began as a CS50 final project, which eventually got accepted to HackHarvard's Hack Week winter accelerator program.
-
-Let's face it: dining hall food isn't amazing. Yet, it takes so much work to pick through the dozens of emails that flood your inbox just to find events that offer free food. Here is our solution. Using a Bayesian classification algorithm, we scan Harvard mailing lists for mentions of free food, and post it online.
-
-Here you can find the code for Food Finder v1. We've learned a lot since we first made it in Fall 2012, so we're currently working a bigger, better version :).
+This is a website uses a naive Bayesian classification algorithm to detect mentions of free food on Harvard mailing lists and post them online. Let's face it: there is a wealth of events at Harvard, and most of them have free food. Now, we don't support going to an event just to weasel some food out of it, but if you happen to discover an event that you're interested in, and that has awesome food... well, why not?

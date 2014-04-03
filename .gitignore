@@ -1,0 +1,4 @@
+scripts/config.py
+*.pyc
+scripts/old
+.DS_Store

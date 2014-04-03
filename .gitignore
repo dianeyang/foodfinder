@@ -2,3 +2,4 @@ scripts/config.py
 *.pyc
 scripts/old
 .DS_Store
+includes/constants.php

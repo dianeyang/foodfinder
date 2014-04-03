@@ -1,5 +1,8 @@
+import csv
+import os
+import MySQLdb
 import re
-from collections import defaultdict
+
 
 stopwords = ("a", "all", "an", "any", "and", "at", "are", "as", "about", "also",
 			 "be", "by", "but",
@@ -19,14 +22,35 @@ stopwords = ("a", "all", "an", "any", "and", "at", "are", "as", "about", "also",
              "with", "when", "what", "would", "will","was","were", "we", "who", "which",
              "you", "your")
 
+def array_to_csv(path, array, mode):
+    csvfile = open(path, mode)
+    
+    csvfile.seek(0,0)
+    for row in array:
+        for col in row:
+            csvfile.write(str(col) + ",")
+        csvfile.seek(-1,1)
+        csvfile.write("\n")
+
+    csvfile.close()
+    
+def csv_to_array(path, mode):
+    csvfile = open(path, mode)
+    parsed_file = csv.reader(csvfile, delimiter=",")
+    array = []
+    
+    for row in parsed_file:
+        array.append(row)
+    
+    csvfile.close()
+
+    return array
+
 def clean(word):
-	'''
-	Filter out words that don't contribute to meaning
-	'''
 	word = word.lower()
-	word = word.translate(None, "?!.,:;()*\"\'") # strip chars that could appear in usable word
+	word = word.translate(None, "?!.,:;()*\"\'")
 	
-	if re.sub(r'[\w]', '', word): # word contains undesirable characters
+	if re.sub(r'[\w]', '', word):
 		return None
 	if len(word) < 2:
 		return None
@@ -36,13 +60,7 @@ def clean(word):
 		return None
 	return word
 
-def text_to_list(text):
-	raw_words = re.split('\W+', text.strip())
+def str_to_array(text):
+	raw_words = re.split('\W+', text.lower().strip())
 	clean_words = map(clean, raw_words)
 	return filter(lambda word: word, clean_words)
-
-def list_to_dict(lst):
-	d = defaultdict(int)
-	for word in lst:
-		d[word] += 1
-	return d
